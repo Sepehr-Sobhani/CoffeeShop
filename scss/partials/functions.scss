@@ -1,0 +1,42 @@
+@import "./variables.scss";
+
+@mixin flex() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin between() {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin hover-border() {
+  &:hover {
+    transition: all 0.5s;
+    transform: translate(5px, 5px);
+  }
+}
+@keyframes can {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes glow {
+  0% {
+    background-color: $darkGray;
+  }
+  100% {
+    background-color: $blue;
+  }
+}
+span {
+  font-weight: 700;
+}

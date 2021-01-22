@@ -1,0 +1,251 @@
+@import "./partials/variables";
+@import "./partials/functions";
+
+html {
+  font-size: 20px;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: open sans, sans-serif;
+  color: $darkGray;
+}
+.container {
+  max-width: 82%;
+  margin: 0 auto;
+}
+.nitro-coffee {
+  @include flex();
+  justify-content: space-between;
+}
+
+.shopNow {
+  &__header {
+    font-size: 60px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  &__content {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 0;
+  }
+  &__link {
+    text-decoration: none;
+    position: relative;
+  }
+}
+
+.shopNow__button {
+  font-size: 21px;
+  font-weight: 400;
+  margin-top: 9px;
+  color: white;
+  background-color: $blue;
+  padding: 20px;
+  border: none;
+  min-width: 180px;
+  max-width: 80%;
+}
+
+.black-border {
+  border: $grayBorder;
+  min-width: 178px;
+  max-width: 80%;
+  height: 62px;
+  position: absolute;
+  top: -25px;
+  left: -7px;
+  @include hover-border();
+}
+
+.bigBag__img {
+  max-width: 100%;
+  margin-top: 25px;
+  margin-right: 50px;
+}
+.product-container {
+  background-color: $lightGray;
+}
+
+.product-card__header {
+  text-align: center;
+  font-weight: 300;
+  font-size: 60px;
+  margin-bottom: 1px;
+  padding-top: 45px;
+}
+.all-cards {
+  @include between();
+  margin-top: 55px;
+  margin-bottom: 55px;
+}
+.product-card {
+  min-width: 330px;
+  max-width: 350px;
+  min-height: 440px;
+  max-height: 460px;
+  border: solid 1px white;
+  border-radius: 10px;
+  box-shadow: 0 5px 9px -1px rgba(0, 0, 0, 0.25);
+  width: 20%;
+  background-color: white;
+  @include flex();
+  flex-direction: column;
+  overflow: hidden;
+}
+.product-card {
+  &__img {
+    padding: 30px;
+    min-height: 240px;
+    max-height: 550px;
+  }
+  &__text {
+    width: 100%;
+    @include flex();
+    background-color: $pink;
+    justify-content: space-around;
+    padding: 1.3rem;
+    margin-top: 22px;
+  }
+}
+
+.product-card {
+  &__text-left {
+    display: flex;
+    flex-direction: column;
+    line-height: 15px;
+  }
+  &__title {
+    font-weight: 300;
+    font-size: 33px;
+    margin-bottom: 0;
+    margin-top: 15px;
+  }
+  &__description {
+    color: $Gray;
+  }
+  &__price {
+    color: $blue;
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+
+.shopNow__button--block {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+.black-border2 {
+  border: $grayBorder;
+  min-width: 175px;
+  max-width: 80%;
+  height: 60px;
+  position: absolute;
+  left: 857px;
+  bottom: 60px;
+  @include hover-border();
+}
+.different {
+  background-color: white;
+  padding-top: 70px;
+}
+.discount-img {
+  @include between();
+  margin: 20px 0;
+}
+.different-img {
+  width: 50px;
+  max-width: 110px;
+  min-width: 20px;
+}
+.learn-more {
+  position: relative;
+}
+.black-border3 {
+  border: $grayBorder;
+  min-width: 175px;
+  max-width: 80%;
+  height: 60px;
+  position: absolute;
+  bottom: -15px;
+  right: 5px;
+  @include hover-border();
+}
+.can {
+  background-image: url("../assets/images/coldbrewbackground.png");
+  background-size: cover;
+  width: 435px;
+  height: 435px;
+  @include flex();
+  flex-direction: column;
+  position: relative;
+  &:hover {
+    .can__img {
+      animation-name: can;
+      animation-duration: 2s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+.black-border4 {
+  border: 5px solid $blue;
+  width: 435px;
+  height: 435px;
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  &:hover {
+    transition: all 0.5s;
+    transform: translate(20px, 20px);
+  }
+}
+
+.discount {
+  background-color: #ffffff;
+  height: 500px;
+  @include flex();
+}
+
+.discount-content {
+  background-color: $darkGray;
+  color: white;
+  width: 80%;
+  height: 65px;
+  max-width: 90%;
+  padding: 20px;
+  text-align: center;
+  font-size: 45px;
+  animation: glow 2.5s linear infinite alternate;
+}
+
+.footer {
+  font-size: 0.85rem;
+  @include between();
+  position: relative;
+  &__head {
+    font-size: 33px;
+    font-weight: 400;
+  }
+  &__logo1 {
+    position: absolute;
+    width: 100px;
+    left: -205px;
+    bottom: 10px;
+    opacity: 25%;
+  }
+  &__logo2 {
+    position: absolute;
+    width: 100px;
+    right: -200px;
+    opacity: 25%;
+  }
+  &__img {
+    width: 50px;
+    min-width: 50px;
+    max-width: 120px;
+  }
+}

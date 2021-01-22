@@ -1,0 +1,169 @@
+@import "./partials/variables";
+@import "./partials/functions";
+
+html {
+  font-size: 20px;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: open sans, sans-serif;
+  background-color: $pink;
+  color: $darkGray;
+  margin: 0;
+}
+
+.nitro {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 5px;
+  &__link {
+    padding-right: 0;
+    margin: 5px 0px 0px 15px;
+  }
+  &__img {
+    margin-top: 22px;
+    width: 50px;
+    max-width: 120px;
+  }
+  &__h2 {
+    font-family: open sans;
+    font-weight: 300;
+    font-size: 60px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+.logo {
+  width: 50%;
+  display: flex;
+}
+.main-nav {
+  width: 50%;
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 21px;
+    font-weight: 400;
+    list-style: none;
+  }
+  &__link {
+    margin-right: 1.5rem;
+    text-decoration: none;
+    color: $darkGray;
+    font-weight: normal;
+  }
+  &__link {
+    margin-right: 1.5rem;
+    text-decoration: none;
+    color: $darkGray;
+    font-weight: normal;
+  }
+  &__link--active {
+    color: $blue;
+  }
+}
+
+.banner {
+  background-image: url("../assets/images/coffee-circle.jpg");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 535px;
+  max-height: 600px;
+  @include flex();
+  position: relative;
+}
+
+.bannerTitle {
+  font-weight: lighter;
+  font-size: 60px;
+  color: white;
+  background: $darkGray;
+  min-width: 280px;
+  max-width: 300px;
+  min-height: 180px;
+  max-height: 200px;
+  @include flex();
+}
+.border {
+  position: absolute;
+  top: 160px;
+  left: 795px;
+  border: solid 5px $blue;
+  min-width: 276px;
+  max-width: 300px;
+  min-height: 176px;
+  max-height: 200px;
+  &:hover {
+    transform: translate(15px, 15px);
+    transition: all 0.5s;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+.nav-title {
+  &__list {
+    background-color: $darkGray;
+    text-align: center;
+    margin: 0 auto;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 60px;
+    max-height: 80px;
+    @include flex();
+  }
+  &__link {
+    text-decoration: none;
+    color: white;
+    font-size: 21px;
+    padding: 20px;
+  }
+  &__item {
+    margin-top: 15px;
+    border-left: solid 4px $blue;
+  }
+}
+
+#coldDrink {
+  background-color: $lightGray;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.menu {
+  &__title {
+    text-align: center;
+    font-size: 60px;
+    font-weight: lighter;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  &__item {
+    text-align: center;
+    font-size: 33px;
+    font-weight: 300;
+    margin-bottom: 0;
+    margin-top: 2px;
+  }
+  &__details {
+    font-size: 18px;
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 0;
+    font-style: italic;
+    font-weight: normal;
+  }
+  &__price {
+    font-size: 0.8rem;
+    text-align: center;
+    color: $blue;
+    margin-top: 4px;
+  }
+}
